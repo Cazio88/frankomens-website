@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="products-section" style="padding: 50px; text-align: center;">
+    <h1>Our Products</h1>
+    <p>We specialize in high-quality dried organic citrus peels, perfect for food, beverages, and essential oils.</p>
+
+    <div class="product-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
+        <!-- Example product card -->
+        <div class="product-card" style="border: 1px solid #ddd; border-radius: 10px; width: 250px; padding: 20px; text-align: center;">
+            <img src="{% static 'core/images/orange_peel.jpg' %}" alt="Dried Orange Peel" style="width: 100%; border-radius: 10px;">
+            <h3>Dried Orange Peel</h3>
+            <p>Organic, sun-dried orange peel for culinary and aromatic uses.</p>
+        </div>
+
+        <div class="product-card" style="border: 1px solid #ddd; border-radius: 10px; width: 250px; padding: 20px; text-align: center;">
+            <img src="{% static 'core/images/lemon_peel.jpg' %}" alt="Dried Lemon Peel" style="width: 100%; border-radius: 10px;">
+            <h3>Dried Lemon Peel</h3>
+            <p>Premium dried lemon peel, perfect for teas, desserts, and essential oils.</p>
+        </div>
+
+        <div class="product-card" style="border: 1px solid #ddd; border-radius: 10px; width: 250px; padding: 20px; text-align: center;">
+            <img src="{% static 'core/images/mixed_peels.jpg' %}" alt="Mixed Citrus Peels" style="width: 100%; border-radius: 10px;">
+            <h3>Mixed Citrus Peels</h3>
+            <p>A blend of orange, lemon, and other citrus peels, organically dried.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
