@@ -1,64 +1,105 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block content %}
-<!-- About Page Hero Section -->
-<section class="hero" style="text-align:center; padding:60px; background-color:#f5f5f5;">
-    <h1>About FrankoMens Company Limited</h1>
-    <p>Excellence in Processing & Exporting Dried Organic Citrus Peels</p>
-</section>
+{% block title %}About Us | FrankoMens Company Limited{% endblock %}
 
-<!-- Our Story Section -->
-<section class="our-story" style="padding:60px; max-width:1000px; margin:auto; display:flex; gap:40px; align-items:center;">
-    <div class="story-image" style="flex:1;">
-        <img src="{% static 'core/images/logo.png' %}" alt="FrankoMens Logo" style="max-width:300px; border-radius:10px;">
-    </div>
-    <div class="story-text" style="flex:2;">
-        <h2>Our Story</h2>
-        <p>
-            FrankoMens Company Limited was founded with a vision to deliver high-quality, sustainably processed
-            dried citrus peels to clients around the world. With years of expertise in organic agriculture and
-            food processing, we ensure that every product we export meets the highest standards of quality and safety.
+{% block content %}
+
+<!-- About Hero -->
+<section class="page-hero">
+    <div class="container">
+        <h1>About FrankoMens Company Limited</h1>
+        <p class="page-hero-subtitle">
+            Excellence in Processing & Exporting Dried Organic Citrus Peels
         </p>
     </div>
 </section>
 
-<!-- Mission Section -->
-<section class="mission" style="padding:60px; background-color:#fafafa; text-align:center;">
-    <h2>Our Mission</h2>
-    <p style="max-width:700px; margin:auto;">
-        To provide premium dried organic citrus peels that bring natural flavor, aroma, and health benefits to industries worldwide,
-        while promoting sustainable practices in agriculture and processing.
-    </p>
-</section>
+<!-- Our Story -->
+<section class="story-section">
+    <div class="container story-grid">
+        <div class="story-image">
+            <img src="{% static 'core/images/logo.png' %}" alt="FrankoMens Logo">
+        </div>
 
-<!-- Why Choose Us Section -->
-<section class="why-choose-us" style="padding:60px; max-width:1000px; margin:auto;">
-    <h2 style="text-align:center; margin-bottom:40px;">Why Choose Us?</h2>
-    <div class="features" style="display:flex; gap:30px; flex-wrap:wrap; justify-content:center;">
-        <div class="feature-card" style="flex:1 1 250px; border:1px solid #ddd; padding:20px; border-radius:8px; text-align:center;">
-            <h3>Premium Quality</h3>
-            <p>Every batch is carefully processed to maintain aroma, flavor, and essential oils.</p>
-        </div>
-        <div class="feature-card" style="flex:1 1 250px; border:1px solid #ddd; padding:20px; border-radius:8px; text-align:center;">
-            <h3>Organic & Sustainable</h3>
-            <p>We source citrus peels from organic farms and follow eco-friendly processing methods.</p>
-        </div>
-        <div class="feature-card" style="flex:1 1 250px; border:1px solid #ddd; padding:20px; border-radius:8px; text-align:center;">
-            <h3>Global Export</h3>
-            <p>Reliable international shipping ensures your orders reach you safely and on time.</p>
-        </div>
-        <div class="feature-card" style="flex:1 1 250px; border:1px solid #ddd; padding:20px; border-radius:8px; text-align:center;">
-            <h3>Expert Team</h3>
-            <p>Our team has years of experience in citrus processing, quality control, and export management.</p>
+        <div class="story-content">
+            <h2>Our Story</h2>
+            <p>
+                FrankoMens Company Limited was founded with a clear vision:
+                to deliver high-quality, sustainably processed dried citrus peels
+                to clients around the world.
+            </p>
+            <p>
+                With years of expertise in organic agriculture and food processing,
+                we ensure that every product meets international quality, safety,
+                and export standards.
+            </p>
         </div>
     </div>
 </section>
 
-<!-- Call to Action -->
-<section class="contact-cta" style="padding:60px; text-align:center; background-color:#f5f5f5;">
-    <h2>Get in Touch</h2>
-    <p>Contact us for inquiries, partnerships, or bulk orders of dried organic citrus peels.</p>
-    <a href="#contact" class="btn" style="padding:12px 25px; background-color:#FFA500; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold;">Contact Us</a>
+<!-- Mission -->
+<section class="mission-section">
+    <div class="container">
+        <h2>Our Mission</h2>
+        <p class="mission-text">
+            To provide premium dried organic citrus peels that deliver
+            natural flavor, aroma, and health benefits, while promoting
+            sustainable agricultural and processing practices.
+        </p>
+    </div>
 </section>
+
+<!-- Why Choose Us -->
+<section class="values-section">
+    <div class="container">
+        <h2 class="section-title">Why Choose FrankoMens</h2>
+
+        <div class="values-grid">
+            <div class="value-card">
+                <h3>Premium Quality</h3>
+                <p>
+                    Each batch is carefully processed to preserve aroma,
+                    flavor, and essential oils.
+                </p>
+            </div>
+
+            <div class="value-card">
+                <h3>Organic & Sustainable</h3>
+                <p>
+                    We source from organic farms and apply eco-friendly
+                    processing methods.
+                </p>
+            </div>
+
+            <div class="value-card">
+                <h3>Global Export Capability</h3>
+                <p>
+                    Reliable international logistics ensure safe and
+                    timely delivery worldwide.
+                </p>
+            </div>
+
+            <div class="value-card">
+                <h3>Experienced Team</h3>
+                <p>
+                    Our specialists bring years of expertise in citrus
+                    processing, quality control, and export management.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="contact-cta">
+    <div class="container">
+        <h2>Let’s Work Together</h2>
+        <p>
+            Contact us for partnerships, bulk orders, or export inquiries.
+        </p>
+        <a href="{% url 'contact' %}" class="btn-primary">Contact Us</a>
+    </div>
+</section>
+
 {% endblock %}

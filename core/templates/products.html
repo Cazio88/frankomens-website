@@ -1,30 +1,70 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
 
+{% block title %}Products | FrankoMens Company Limited{% endblock %}
+
 {% block content %}
-<section class="products-section" style="padding: 50px; text-align: center;">
-    <h1>Our Products</h1>
-    <p>We specialize in high-quality dried organic citrus peels, perfect for food, beverages, and essential oils.</p>
 
-    <div class="product-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
-        <!-- Example product card -->
-        <div class="product-card" style="border: 1px solid #ddd; border-radius: 10px; width: 250px; padding: 20px; text-align: center;">
-            <img src="{% static 'core/images/orange_peel.jpg' %}" alt="Dried Orange Peel" style="width: 100%; border-radius: 10px;">
-            <h3>Dried Orange Peel</h3>
-            <p>Organic, sun-dried orange peel for culinary and aromatic uses.</p>
-        </div>
-
-        <div class="product-card" style="border: 1px solid #ddd; border-radius: 10px; width: 250px; padding: 20px; text-align: center;">
-            <img src="{% static 'core/images/lemon_peel.jpg' %}" alt="Dried Lemon Peel" style="width: 100%; border-radius: 10px;">
-            <h3>Dried Lemon Peel</h3>
-            <p>Premium dried lemon peel, perfect for teas, desserts, and essential oils.</p>
-        </div>
-
-        <div class="product-card" style="border: 1px solid #ddd; border-radius: 10px; width: 250px; padding: 20px; text-align: center;">
-            <img src="{% static 'core/images/mixed_peels.jpg' %}" alt="Mixed Citrus Peels" style="width: 100%; border-radius: 10px;">
-            <h3>Mixed Citrus Peels</h3>
-            <p>A blend of orange, lemon, and other citrus peels, organically dried.</p>
-        </div>
+<!-- Products Hero -->
+<section class="page-hero">
+    <div class="container">
+        <h1>Our Products</h1>
+        <p class="page-hero-subtitle">
+            High-quality dried organic citrus peels for food, beverage, and industrial applications
+        </p>
     </div>
 </section>
+
+<!-- Products List -->
+<section class="products-section">
+    <div class="container">
+
+        <div class="product-grid">
+
+            <!-- Product -->
+            <div class="product-card">
+                <img src="{% static 'core/images/peels.jpg' %}" alt="Dried Orange Peel">
+                <h3>Dried Orange Peel</h3>
+                <p>
+                    Organic, carefully dried orange peel with rich aroma and natural oils,
+                    suitable for culinary, beverage, and aromatic use.
+                </p>
+            </div>
+
+            <!-- Product -->
+            <div class="product-card">
+                <img src="{% static 'core/images/lemon.jpg' %}" alt="Dried Lemon Peel">
+                <h3>Dried Lemon Peel</h3>
+                <p>
+                    Premium dried lemon peel ideal for teas, desserts,
+                    flavoring, and essential oil extraction.
+                </p>
+            </div>
+
+            <!-- Product -->
+            <div class="product-card">
+                <img src="{% static 'core/images/peels2.jpg' %}" alt="Mixed Citrus Peels">
+                <h3>Citrus Peels</h3>
+                <p>
+                    A balanced blend of organically dried citrus peels,
+                    offering versatility for food and industrial applications.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Products CTA -->
+<section class="contact-cta">
+    <div class="container">
+        <h2>Bulk Orders & Export Inquiries</h2>
+        <p>
+            Contact us for specifications, pricing, and international shipping details.
+        </p>
+        <a href="{% url 'contact' %}" class="btn-primary">Request Information</a>
+    </div>
+</section>
+
 {% endblock %}
